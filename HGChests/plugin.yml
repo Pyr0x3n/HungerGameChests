@@ -1,0 +1,12 @@
+name: WafsChests
+main: net.gummycraft.wafsChests.Chests
+version: 0.0.1
+description: Chests, chests and more chests
+author: wafwot
+website: http://www.gummycraft.net
+softdepend: [LibsHungergames]
+commands:
+  chest:
+    description: The only command you ever need. only used for non-HG
+
+

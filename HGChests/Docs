@@ -1,0 +1,48 @@
+Let's start with I don't share many plugins because I am not good at describing them, not good at
+documentation and not good at having patience. I know my limitations. Although this can be used 
+with command lines I am only explaining how it works with LibsHungergames.
+
+You set a few lines of config, or leave it as the defaults doing a decent job and you will
+have random chests with random loot on your maps. You can adjust how many, and it
+scales according to how many players there are in the match. You can predefine some chest
+locations and their contents or let it be random. And by random I mean, I use the same
+items you already configured for LibsHungergames.
+
+What it does. 
+
+1) When the world is loaded it scans the area defined in the config.yml file, finding
+any Trapped Chests. Any it finds gets record along with the contents then promptly removed from the
+map.
+
+2) When the game starts. Chests that were found get filled first, using information from the
+config and the number of players. The contents of these chests would come from their contents
+when found, if there were no contents then random stuff goes in there.
+
+3) Still as the game starts. If more chests are needed random spots are used, within the boundries
+specified in the config file. Contents are random.
+
+If you use preconfigured maps you get a lot of control over the chests. If not, then just deal with random
+chests, it works very well too.
+
+
+
+config.yml file ...
+
+confignum: 2				A useless version number that I currently ignore
+chunkminx: -11				The lowest X-Axis Chunk to populate with chests
+chunkmaxx: 11				The highest X-Axis Chunk to populate with chests
+chunkminz: -11				The lowest Z-Axis Chunk to populate with chests
+chunkmaxz: 11				The highest Z-Axis Chunk to populate with chests
+chunkbuffer: 2				the amount of chunks 0,0 (spawn) not to put chests 0=none, 1=just chunk 0/0
+chestoverallmin: 13			The Minimum number of chests to place on the map
+chestoverallmax: 120		The Maximum number of chests to place on the map
+randomchestmin: 4			Always use at least this many random chests.
+chestperplayermin: 3		Minimum number of chests to put on the map per player
+chestperplayermax: 8		Maximum number of chests to put on the map per player
+slotperchestmin: 0			The least number of slots to fill per chest
+slotperchestmax: 6			The maximum number of slots to fill per chest
+slotperplayermin: 0			The minimum number of slots to fill per player, per chest. (double, not int)
+slotperplayermax: .4		The maximum number of slots to fill per player, per chest.
+
+
+

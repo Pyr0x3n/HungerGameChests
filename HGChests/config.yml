@@ -1,0 +1,15 @@
+confignum: 2
+chunkminx: -11
+chunkmaxx: 11
+chunkminz: -11
+chunkmaxz: 11
+chunkbuffer: 2
+chestoverallmin: 13
+chestoverallmax: 120
+randomchestmin: 4
+chestperplayermin: 3
+chestperplayermax: 8
+slotperchestmin: 0
+slotperchestmax: 6
+slotperplayermin: 0
+slotperplayermax: .4
